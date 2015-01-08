@@ -104,10 +104,19 @@ body {
   border-style: solid;
 }
 
-form.ng-submitted {
+form {
+  .errors {
+    list-style: none;
+    margin: 0;
+    padding: 5px 0;
+    color: red;
+  }
+  &.ng-submitted {
   input, select, textarea {
     &.ng-invalid {
       border-color: red;
     }
   }
+}
+
 }
