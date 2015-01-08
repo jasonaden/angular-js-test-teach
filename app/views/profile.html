@@ -27,8 +27,10 @@
         <label class="col-sm-2 control-label" for="_em">Email</label>
         <div class="col-sm-10">
           <input type="email" placeholder="Email" class="form-control" id="_em"
-            ng-model="$vm.profile.email" name="email" required>
-          <ul class="errors" ng-messages="ProfileForm.email.$error" ng-messages-include="views/default-messages.html"></ul>
+            ng-model="$vm.profile.email" name="email" required tt-username>
+          <ul class="errors" ng-messages="ProfileForm.email.$error" ng-messages-include="views/default-messages.html">
+            <li ng-message="username">Username already in use!</li>
+          </ul>
         </div>
       </div>
 
