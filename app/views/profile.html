@@ -37,8 +37,10 @@
         <label class="col-sm-2 control-label" for="_ag">Age</label>
         <div class="col-sm-4">
           <input type="number" placeholder="Age" class="form-control" id="_ag"
-            ng-model="$vm.profile.age" name="age" required>
-          <ul class="errors" ng-messages="ProfileForm.age.$error" ng-messages-include="views/default-messages.html"></ul>
+            ng-model="$vm.profile.age" name="age" required tt-age="{min: 18, max: 80}">
+          <ul class="errors" ng-messages="ProfileForm.age.$error" ng-messages-include="views/default-messages.html">
+            <li ng-message="age">Age must be between 18 and 80 years old</li>
+          </ul>
         </div>
       </div>
 
