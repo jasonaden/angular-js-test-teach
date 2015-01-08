@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name angularJsTestTeachApp
+ * @name testTeachApp
  * @description
- * # angularJsTestTeachApp
+ * # testTeachApp
  *
  * Main module of the application.
  */
 angular
-  .module('angularJsTestTeachApp', [
+  .module('testTeachApp', [
     'ngAnimate',
     'ngResource',
     'ngRoute',
@@ -19,11 +19,11 @@ angular
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        controller: 'MainController'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      .when('/profile', {
+        templateUrl: 'views/profile.html',
+        controller: 'ProfileController'
       })
       .otherwise({
         redirectTo: '/'

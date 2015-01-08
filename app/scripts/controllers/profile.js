@@ -2,16 +2,18 @@
 
 /**
  * @ngdoc function
- * @name angularJsTestTeachApp.controller:AboutCtrl
+ * @name testTeachApp.controller:ProfileController
  * @description
- * # AboutCtrl
- * Controller of the angularJsTestTeachApp
+ * # ProfileController
+ * Controller of the testTeachApp
  */
-angular.module('angularJsTestTeachApp')
-  .controller('AboutCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+angular.module('testTeachApp')
+  .controller('ProfileController', function () {
+    this.displayTitle = function () {
+      if (this.firstName && this.lastName) {
+        return this.firstName + ' ' + this.lastName;
+      }
+      return 'User Profile Form';
+    };
+    return this;
   });

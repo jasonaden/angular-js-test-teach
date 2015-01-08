@@ -89,3 +89,17 @@ body {
     border-bottom: 0;
   }
 }
+
+.content-block {
+  margin-right: 0;
+  margin-left: 0;
+  background-color: #fff;
+  border-color: #ddd;
+  border-width: 1px;
+  border-radius: 4px 4px 0 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  position: relative;
+  padding: 15px 15px 15px;
+  border-style: solid;
+}
