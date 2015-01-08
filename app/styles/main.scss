@@ -103,3 +103,11 @@ body {
   padding: 15px 15px 15px;
   border-style: solid;
 }
+
+form.ng-submitted {
+  input, select, textarea {
+    &.ng-invalid {
+      border-color: red;
+    }
+  }
+}
