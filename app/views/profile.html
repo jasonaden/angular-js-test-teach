@@ -12,13 +12,19 @@
         <div class="col-sm-4">
           <input type="text" placeholder="First Name" class="form-control" id="_fn"
             ng-model="$vm.profile.firstName" name="firstName" required>
-          <ul class="errors" ng-messages="ProfileForm.firstName.$error" ng-messages-include="views/default-messages.html"></ul>
+          <ul class="errors"
+              ng-if="ProfileForm.firstName.$touched || ProfileForm.$submitted"
+              ng-messages="ProfileForm.firstName.$error"
+              ng-messages-include="views/default-messages.html"></ul>
         </div>
         <label class="col-sm-2 control-label" for="_ln">Last Name</label>
         <div class="col-sm-4">
           <input type="text" placeholder="Last Name" class="form-control" id="_ln"
             ng-model="$vm.profile.lastName" name="lastName" required>
-          <ul class="errors" ng-messages="ProfileForm.lastName.$error" ng-messages-include="views/default-messages.html"></ul>
+          <ul class="errors"
+              ng-if="ProfileForm.lastName.$touched || ProfileForm.$submitted"
+              ng-messages="ProfileForm.lastName.$error"
+              ng-messages-include="views/default-messages.html"></ul>
         </div>
       </div>
 
@@ -28,7 +34,10 @@
         <div class="col-sm-10">
           <input type="email" placeholder="Email" class="form-control" id="_em"
             ng-model="$vm.profile.email" name="email" required tt-username>
-          <ul class="errors" ng-messages="ProfileForm.email.$error" ng-messages-include="views/default-messages.html">
+          <ul class="errors"
+              ng-if="ProfileForm.email.$touched || ProfileForm.$submitted"
+              ng-messages="ProfileForm.email.$error"
+              ng-messages-include="views/default-messages.html">
             <li ng-message="username">Username already in use!</li>
           </ul>
         </div>
@@ -40,7 +49,10 @@
         <div class="col-sm-4">
           <input type="number" placeholder="Age" class="form-control" id="_ag"
             ng-model="$vm.profile.age" name="age" required tt-age="{min: 18, max: 80}">
-          <ul class="errors" ng-messages="ProfileForm.age.$error" ng-messages-include="views/default-messages.html">
+          <ul class="errors"
+              ng-if="ProfileForm.age.$touched || ProfileForm.$submitted"
+              ng-messages="ProfileForm.age.$error"
+              ng-messages-include="views/default-messages.html">
             <li ng-message="age">Age must be between 18 and 80 years old</li>
           </ul>
         </div>
@@ -59,7 +71,10 @@
         <div class="col-sm-10">
           <input type="text" placeholder="Address Line 1" class="form-control" id="_al1"
             ng-model="$vm.profile.address.line1" name="addressLine1" required>
-          <ul class="errors" ng-messages="ProfileForm.addressLine1.$error" ng-messages-include="views/default-messages.html"></ul>
+          <ul class="errors"
+              ng-if="ProfileForm.addressLine1.$touched || ProfileForm.$submitted"
+              ng-messages="ProfileForm.addressLine1.$error"
+              ng-messages-include="views/default-messages.html"></ul>
         </div>
       </div>
 
@@ -69,7 +84,10 @@
         <div class="col-sm-10">
           <input type="text" placeholder="Address Line 2" class="form-control" id="_al2"
             ng-model="$vm.profile.address.line2" name="addressLine2">
-          <ul class="errors" ng-messages="ProfileForm.addressLine2.$error" ng-messages-include="views/default-messages.html"></ul>
+          <ul class="errors"
+              ng-if="ProfileForm.addressLine2.$touched || ProfileForm.$submitted"
+              ng-messages="ProfileForm.addressLine2.$error"
+              ng-messages-include="views/default-messages.html"></ul>
         </div>
       </div>
 
@@ -79,7 +97,10 @@
         <div class="col-sm-10">
           <input type="text" placeholder="City" class="form-control" id="_ac"
             ng-model="$vm.profile.address.city" name="addressCity" required>
-          <ul class="errors" ng-messages="ProfileForm.addressCity.$error" ng-messages-include="views/default-messages.html"></ul>
+          <ul class="errors"
+              ng-if="ProfileForm.addressCity.$touched || ProfileForm.$submitted"
+              ng-messages="ProfileForm.addressCity.$error"
+              ng-messages-include="views/default-messages.html"></ul>
         </div>
       </div>
 
@@ -89,14 +110,20 @@
         <div class="col-sm-4">
           <input type="text" placeholder="State" class="form-control" id="_as"
             ng-model="$vm.profile.address.state" name="addressState" required>
-          <ul class="errors" ng-messages="ProfileForm.addressState.$error" ng-messages-include="views/default-messages.html"></ul>
+          <ul class="errors"
+              ng-if="ProfileForm.addressState.$touched || ProfileForm.$submitted"
+              ng-messages="ProfileForm.addressState.$error"
+              ng-messages-include="views/default-messages.html"></ul>
         </div>
 
         <label class="col-sm-2 control-label" for="_pc">Postcode</label>
         <div class="col-sm-4">
           <input type="text" placeholder="Post Code" class="form-control" id="_pc"
             ng-model="$vm.profile.address.postcode" name="addressPostcode" required>
-          <ul class="errors" ng-messages="ProfileForm.addressPostcode.$error" ng-messages-include="views/default-messages.html"></ul>
+          <ul class="errors"
+              ng-if="ProfileForm.addressPostcode.$touched || ProfileForm.$submitted"
+              ng-messages="ProfileForm.addressPostcode.$error"
+              ng-messages-include="views/default-messages.html"></ul>
         </div>
       </div>
 

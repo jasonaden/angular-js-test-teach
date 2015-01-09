@@ -112,11 +112,12 @@ form {
     color: red;
   }
   &.ng-submitted {
-  input, select, textarea {
-    &.ng-invalid {
+    .ng-invalid {
       border-color: red;
     }
   }
-}
+  .ng-invalid.ng-touched {
+    border-color: red;
+  }
 
 }
